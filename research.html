@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research publications, indexing, journal support, and patents of Dr. Pravin Sir.">
+  <title>Research | Dr. Pravin Sir</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=1.0.8">
+</head>
+<body>
+
+  <!-- BACKGROUND PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- LINKEDIN GLOBAL HEADER NAV BAR -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <div class="nav-logo-group">
+        <a href="index.html?reset=true" class="nav-logo-box">PT</a>
+        <div class="nav-search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </div>
+      <nav aria-label="LinkedIn Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+          <li><a href="connect.html" class="nav-link"><i class="fas fa-users"></i><span>Connect</span></a></li>
+          <li><a href="research.html" class="nav-link active"><i class="fas fa-graduation-cap"></i><span>Research</span></a></li>
+          <li><a href="passion.html" class="nav-link"><i class="fas fa-motorcycle"></i><span>Passion</span></a></li>
+          <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i><span>Photo Gallery</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN PROFILE LAYOUT GRID -->
+  <main class="container" style="margin-top: 24px;">
+    <div class="profile-grid">
+      
+      <!-- MAIN FEED COLUMN (LEFT) -->
+      <div class="main-column">
+        
+        <!-- HERO PROFILE CARD -->
+        <div id="hero" class="linkedin-card hero-card">
+          <div class="hero-cover">
+            <video class="hero-cover-video" autoplay loop muted playsinline preload="auto">
+              <source src="vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="hero-avatar-container">
+            <img class="hero-avatar" src="assets/profile_image.png" alt="Dr. Pravin Thangavelu Profile Photo">
+          </div>
+          
+          <div class="hero-info-box">
+            <div class="hero-profile-details">
+              <h1 class="hero-profile-name">
+                Dr. Pravin Thangavelu 
+                <span style="font-size: 15px; color: var(--text-muted); font-weight: normal; margin-left: 8px; display: inline-flex; align-items: center; gap: 6px; vertical-align: middle;">
+                  <i class="fas fa-shield-halved" style="font-size: 14px; color: var(--text-muted);" title="Verified account"></i>
+                  <span>He/Him</span>
+                  <span>&middot;</span>
+                  <span style="font-weight: 600; color: var(--text-muted);">1st</span>
+                </span>
+              </h1>
+              <p class="hero-profile-headline">Executive Director - ECLearnix EdTech</p>
+              <p class="hero-profile-location">Coimbatore, Tamil Nadu, India &bull; <a href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank" rel="noopener noreferrer">Contact info</a></p>
+              <a href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank" rel="noopener noreferrer" class="hero-profile-connections" style="display: block; margin-top: 6px;">10,995 followers</a>
+              
+              <div class="hero-actions-bar">
+                <a href="index.html#tribute-hub" class="linkedin-btn btn-primary">Celebrate Birthday 🎉</a>
+                <a href="about.html" class="linkedin-btn btn-secondary">About</a>
+              </div>
+            </div>
+            
+            <div class="hero-institution-badges">
+              <a href="index.html#experience" class="institution-badge">
+                <img class="institution-badge-logo" src="assets/eclearnix_logo.png" alt="ECLearnix EdTech Private Limited Logo">
+                <span>ECLearnix EdTech Private Limited</span>
+              </a>
+              <a href="index.html#education" class="institution-badge">
+                <svg class="institution-badge-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: #990000; border-radius: 4px; border: 1px solid var(--border-linkedin); padding: 2px; background: #FFF;" alt="Anna University Chennai Logo">
+                  <circle cx="12" cy="12" r="10" stroke="#990000" stroke-width="1.5" fill="none" />
+                  <circle cx="12" cy="12" r="6" stroke="#990000" stroke-width="1" fill="none" />
+                  <path d="M12 2 L12 22 M2 12 L22 12 M5 5 L19 19 M5 19 L19 5" stroke="#990000" stroke-width="1" />
+                  <circle cx="12" cy="12" r="3" fill="#990000" />
+                </svg>
+                <span>Anna University Chennai</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESEARCH & PATENTS CARD -->
+        <div id="research" class="linkedin-card">
+          <h2 class="linkedin-card-title">Research &amp; Patents</h2>
+          <div class="experience-list">
+            <!-- Academic Publications Subsection -->
+            <div style="border-bottom: 2px solid var(--accent-linkedin); padding-bottom: 8px; margin-bottom: 20px; margin-top: 10px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: var(--accent-linkedin); display: flex; align-items: center; gap: 8px;">
+                <i class="fas fa-book"></i> Journal &amp; Conference Publications
+              </h3>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Integrated Taguchi cum grey relational experimental analysis technique (GREAT) for optimization and material characterization of FSP surface composites on AA6061 aluminium alloys</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, C Somu, R Rajavel, M Subramanian, PP Reynold</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Materials Today: Proceedings 33, 5156-5161, 2020</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 19</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2020</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Multi-objective particle swarm optimization based preprocessing of multi-class extremely imbalanced datasets</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">R Devi Priya, R Sivaraj, A Abraham, T Pravin, P Sivasankar, N Anitha</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems …, 2022</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 16</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2022</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Clarifying the phenomenon of ultrasonic assisted electric discharge machining</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian, R Ranjith</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Journal of the Indian Chemical Society 99 (10), 100705, 2022</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 16</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2022</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Investigation on mechanical properties of aluminum with copper and silicon carbide using powder metallurgy technique</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">NSMK Nijamudeen, G Muthuarasu, GG Kumar, A Nagarjunan, T Pravin</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Advances in natural and Applied Sciences 11 (4), 277-281, 2017</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 12</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2017</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Optimization of Process Parameters of Al-10% Cu Compacts through Powder Metallurgy</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T. Pravin, M. Sadhasivam, S. Raghuraman</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Applied Mechanics and Materials, 603-607, 2015</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 9</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2015</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">A review on droplet deposition manufacturing-a rapid prototyping technique</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">VS Rajashekhar, T Pravin, K Thiruppathi</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">International Journal of Manufacturing Technology and Management 33 (5), 362-383, 2019</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 8</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2019</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Control of a snake robot with 3R joint mechanism</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">VS Rajashekhar, T Pravin, K Thiruppathi</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">International Journal of Mechanisms and Robotic Systems 4 (3), 176-191, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 7</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Impact of various reinforcement particles on the density of AA7050 graded aluminium fabricated through stir casting</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">R Ranjith, B Karthick, MS Kavi, C Somu, T Pravin</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Materials Today: Proceedings 26, 1465-1468, 2020</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 6</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2020</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Modeling and Simulation of Gravity based Zig-zag Material Handling System for Transferring Materials in Multi Floor Industries</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">SR V. S. Rajashekhar *, T. Pravin , K. Thirupathi</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Indian Journal of Science & Technology 8 (22), 2015</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 6</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2015</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Determination of Mechanical Properties on Aluminium with 5% Copper Powder Metallurgy Route Compacts through Equal Channel Angular Pressing</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">SR M. Sadhasivam, T. Pravin</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Applied Mechanics and Materials, 161-165, 2015</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--accent-linkedin); font-weight: 600; background-color: var(--accent-soft-blue); padding: 2px 8px; border-radius: 4px; font-size: 11px;">Cited by 1</span>
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2015</span>
+                </div>
+              </div>
+            </div>
+            <!-- Publication Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-file-invoice" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">2.2L ENGINE 1D SIMULATION & EXPERIMENTAL ANALYSIS OF EXHAUST MANIFOLD</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">D Krishnamoorthi, M Naveenkumar, T Pravin</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">INTERNATIONAL JOURNAL OF INNOVATIVE RESEARCH EXPLORER 5 (3), 22-26, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patents Subsection -->
+            <div style="border-bottom: 2px solid var(--accent-linkedin); padding-bottom: 8px; margin-bottom: 20px; margin-top: 30px;">
+              <h3 style="font-size: 18px; font-weight: 600; color: var(--accent-linkedin); display: flex; align-items: center; gap: 8px;">
+                <i class="fas fa-file-signature"></i> Registered &amp; Pending Patents
+              </h3>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">HYBRID UNMANNED AERIAL VEHICLE</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 201,841,039,311, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">FRAME OF RECREATIONAL SPORT VEHICLE (GO-KART)</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent 33/2,018, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">TRACTABLE THROTTLE RESTRAINING DEVICE</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 201,841,016,698, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">SMART SENSING ROOM SPRAYER</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, S M, karthick b</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 303,653, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">Work holding component for submerged friction stir welding</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 312,201, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="border-bottom: 1px solid var(--border-linkedin); padding-bottom: 20px; margin-bottom: 20px;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">SOLAR POWERED SANITARY NAPKIN INCINERATOR</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 303,832, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+            <!-- Patent Item -->
+            <div class="experience-item" style="padding-bottom: 0; margin-bottom: 0;">
+              <div class="experience-logo-box" style="background-color: var(--accent-soft-blue); border-radius: 6px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fas fa-certificate" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h4 class="experience-role" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; line-height: 1.4;">AUXILIARY POWER CHARGING  IN PHONES</h4>
+                <p class="experience-company" style="font-size: 13px; color: var(--text-primary); margin-bottom: 4px; font-weight: 500;">T Pravin, M Subramanian</p>
+                <p class="experience-dates" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">IN Patent App. 303,833, 2018</p>
+                <div style="display: flex; gap: 12px; font-size: 12px;">
+                  <span style="color: var(--text-light); font-weight: 500;">Year: 2018</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR COLUMN (RIGHT) -->
+      <div class="sidebar-column">
+        
+        <!-- PUBLIC PROFILE CARD -->
+        <div class="linkedin-card sidebar-card">
+          <h2 class="sidebar-card-title">
+            <span>Profile Language</span>
+            <i class="fas fa-globe" style="color: var(--text-muted); font-size: 14px;"></i>
+          </h2>
+          <p style="font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 12px;">English</p>
+          
+          <hr style="border: none; border-top: 1px solid var(--border-linkedin); margin: 12px 0;">
+          
+          <h2 class="sidebar-card-title">
+            <span>Public Profile &amp; URL</span>
+            <i class="fas fa-edit" style="color: var(--text-muted); font-size: 14px;"></i>
+          </h2>
+          <p style="font-size: 13px; color: var(--accent-linkedin); font-weight: 600;">
+            <a href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank" style="color: var(--accent-linkedin); text-decoration: none;">linkedin.com/in/dr-pravin-thangavelu-32942569</a>
+          </p>
+        </div>
+
+        <!-- BIRTHDAY AD ADVERTISEMENT CARD -->
+        <div class="linkedin-card sidebar-card sidebar-ad-card">
+          <div class="ad-text-top">Celebration Alert</div>
+          <div class="ad-avatar-group">
+            <img class="ad-avatar-profile" src="fam.jpg" alt="Dr. Pravin Sir profile image" style="width:56px; height:56px; object-fit:cover; border-radius:50%;">
+            <img class="ad-avatar-birthday" src="wish.png" alt="Wish image">
+          </div>
+          <h3 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Happy Birthday Dr. Pravin Sir</h3>
+          <p class="ad-message-text">Celebrate Dr. Pravin's special day by sending your respect and wishes inside the Tribute Hub.</p>
+          <a href="index.html#tribute-hub" class="linkedin-btn btn-secondary" style="font-size: 12px; padding: 6px 16px;">Celebrate Now</a>
+        </div>
+
+        <!-- CO-FOUNDERS CONNECTIONS LIST CARD -->
+        <div class="linkedin-card sidebar-card">
+          <h2 class="sidebar-card-title">People Also Viewed</h2>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <img src="somusir.png" alt="Dr. Somu Chinnusamy" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px;">
+              <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span style="font-weight: 600; color: var(--text-primary);">Dr. Somu Chinnusamy</span>
+                <span style="font-size: 11px; color: var(--text-muted);">Co-Founder &amp; Chairman, ECLearnix EdTech</span>
+                <button class="linkedin-btn btn-secondary" style="font-size: 10px; padding: 3px 10px; align-self: flex-start; margin-top: 4px; border-radius: 4px;"><i class="fas fa-user-plus" style="font-size: 9px; color: var(--accent-linkedin);"></i> Connect</button>
+              </div>
+            </li>
+            
+            <hr style="border: none; border-top: 1px solid var(--border-linkedin); margin: 6px 0;">
+
+            <li class="sidebar-item">
+              <i class="fas fa-user-circle" style="font-size: 28px; color: var(--text-light);"></i>
+              <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span style="font-weight: 600; color: var(--text-primary);">Er. Saravana Kumar Madheswaran</span>
+                <span style="font-size: 11px; color: var(--text-muted);">Co-Founder, ECLearnix EdTech</span>
+                <button class="linkedin-btn btn-secondary" style="font-size: 10px; padding: 3px 10px; align-self: flex-start; margin-top: 4px; border-radius: 4px;"><i class="fas fa-user-plus" style="font-size: 9px; color: var(--accent-linkedin);"></i> Connect</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo-row">
+        <div class="footer-logo-icon">PT</div>
+        <span>Happy Birthday Dr. Pravin Sir</span>
+      </div>
+      <div class="footer-icons">
+        <i class="fas fa-motorcycle" title="Ride Direction"></i>
+        <i class="fas fa-lightbulb" title="Innovation"></i>
+        <i class="fas fa-network-wired" title="LinkedIn Influence"></i>
+        <i class="fas fa-car-side" title="Performance Enthusiast"></i>
+      </div>
+      <p class="footer-text">
+        May your journey continue to inspire thousands, create opportunities, and shape the future of education.
+      </p>
+      <p class="footer-text" style="color: var(--text-light); font-size: 10px;">
+        Crafted with Respect &amp; Gratitude by Your ECLearnix IT Team
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=1.0.8"></script>
+</body>
+</html>

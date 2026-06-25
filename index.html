@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Professional LinkedIn-style portfolio and birthday tribute website for Dr. Pravin, celebrating a journey of passion, innovation, and leadership.">
+  <title>Happy Birthday Dr. Pravin Sir</title>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=1.0.8">
+</head>
+
+<body>
+
+  <!-- INTRO SCREEN OVERLAY -->
+  <div id="intro-screen" class="intro-screen">
+    <video autoplay loop muted playsinline class="intro-bg-video">
+      <source src="assets/bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="intro-content">
+      <button id="intro-btn" class="intro-btn-image-container" aria-label="Explore Profile">
+        <img src="assets/start_btn.png" alt="Start" class="intro-btn-image">
+      </button>
+    </div>
+  </div>
+
+  <!-- BIRTHDAY CELEBRATION POPUP MODAL -->
+  <div id="birthday-popup" class="popup-modal">
+    <div class="popup-overlay"></div>
+    <div class="popup-content">
+      <div class="popup-header">
+        <i class="fas fa-gift popup-header-icon"></i>
+        <h2 class="popup-title">Happy Birthday Dr. Pravin Sir! 🎉🎂</h2>
+      </div>
+      <div class="popup-body">
+        <p>Your passion for innovation, dedication to education, entrepreneurial vision, and commitment to guiding
+          students continue to inspire everyone around you.</p>
+        <p>Thank you for creating opportunities, encouraging new ideas, and leading with purpose. Your support,
+          leadership, and mentorship have positively impacted countless students, professionals, and team members.</p>
+        <p>On your special day, we wish you good health, happiness, continued success, and many more milestones ahead.
+          May every year bring new achievements, exciting opportunities, and memorable moments.</p>
+        <p>Thank you for being an inspiring leader and a role model to many.</p>
+        <p
+          style="margin-top: 15px; font-weight: 600; color: var(--accent-linkedin); text-align: right; line-height: 1.5;">
+          With Sincere Respect and Gratitude,<br>Your ECLearnix Team 🎉
+        </p>
+      </div>
+      <div class="popup-footer">
+        <button id="popup-close-btn" class="linkedin-btn btn-primary">Explore</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO TRIBUTE POPUP MODAL -->
+  <div id="video-popup" class="popup-modal">
+    <div class="popup-overlay"></div>
+    <div class="popup-content video-popup-content">
+      <button id="video-popup-close-btn" class="video-close-btn" aria-label="Close video">&times;</button>
+      <div class="video-container">
+        <video id="tribute-video" controls width="100%" height="auto">
+          <!-- The user can replace the src when they supply the video later -->
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANDLE BIRTHDAY POPUP MODAL -->
+  <div id="candle-popup" class="popup-modal">
+    <div class="popup-overlay"></div>
+    <div class="popup-content candle-popup-content">
+      <button id="candle-popup-close-btn" class="video-close-btn" aria-label="Close candle pop-up">&times;</button>
+      <div class="candle-popup-header">
+        <h2 class="candle-popup-title">Make a Wish, Dr. Pravin Sir! 🎂</h2>
+        <p class="candle-popup-desc">Blow out the candles by clicking on their flames, or double-click to light them
+          again!</p>
+      </div>
+      <div class="birthday-cake-wrapper" id="birthday-cake-interactive">
+        <!-- Candles Row -->
+        <div class="candles-row" id="birthday-candles-container">
+          <!-- Candle 1 (Blue) -->
+          <div class="candle-item lit" data-color="blue" id="candle-1">
+            <div class="glow-bg"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-body">
+              <div class="candle-drip"></div>
+              <div class="candle-drip"></div>
+            </div>
+          </div>
+          <!-- Candle 2 (Pink) -->
+          <div class="candle-item lit" data-color="pink" id="candle-2">
+            <div class="glow-bg"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-body">
+              <div class="candle-drip"></div>
+              <div class="candle-drip"></div>
+            </div>
+          </div>
+          <!-- Candle 3 (Gold) -->
+          <div class="candle-item lit" data-color="gold" id="candle-3">
+            <div class="glow-bg"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-body">
+              <div class="candle-drip"></div>
+              <div class="candle-drip"></div>
+            </div>
+          </div>
+          <!-- Candle 4 (Green) -->
+          <div class="candle-item lit" data-color="green" id="candle-4">
+            <div class="glow-bg"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-body">
+              <div class="candle-drip"></div>
+              <div class="candle-drip"></div>
+            </div>
+          </div>
+          <!-- Candle 5 (Purple) -->
+          <div class="candle-item lit" data-color="purple" id="candle-5">
+            <div class="glow-bg"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-body">
+              <div class="candle-drip"></div>
+              <div class="candle-drip"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Cake layers -->
+        <div class="birthday-cake">
+          <!-- Top Layer -->
+          <div class="cake-layer cake-layer-top">
+            <div class="cream-drops">
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+            </div>
+            <div class="frosting"></div>
+          </div>
+          <!-- Middle Layer -->
+          <div class="cake-layer cake-layer-middle">
+            <div class="cream-drops">
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+            </div>
+            <div class="frosting"></div>
+          </div>
+          <!-- Bottom Layer -->
+          <div class="cake-layer cake-layer-bottom">
+            <div class="cream-drops">
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+              <div class="cream-drop"></div>
+            </div>
+            <div class="frosting"></div>
+          </div>
+          <!-- Plate -->
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+      <div class="candle-instruction-tip">
+        <i class="fas fa-lightbulb"></i>
+        <span id="candle-tip-text">Hover to glow, Click any candle to blow it out!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- LINKEDIN GLOBAL HEADER NAV BAR -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <div class="nav-logo-group">
+        <a href="index.html?reset=true" class="nav-logo-box">PT</a>
+        <div class="nav-search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </div>
+      <nav aria-label="LinkedIn Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+          <li><a href="connect.html" class="nav-link"><i class="fas fa-users"></i><span>Connect</span></a></li>
+          <li><a href="research.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Research</span></a>
+          </li>
+          <li><a href="passion.html" class="nav-link"><i class="fas fa-motorcycle"></i><span>Passion</span></a></li>
+          <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i><span>Photo Gallery</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN PROFILE LAYOUT GRID -->
+  <main class="container" style="margin-top: 24px;">
+    <div class="profile-grid">
+
+      <!-- MAIN FEED COLUMN (LEFT) -->
+      <div class="main-column">
+
+        <!-- HERO PROFILE CARD -->
+        <div id="hero" class="linkedin-card hero-card">
+          <div class="hero-cover">
+            <video class="hero-cover-video" autoplay loop muted playsinline preload="auto">
+              <source src="vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="hero-avatar-container">
+            <img class="hero-avatar" src="assets/profile_image.png" alt="Dr. Pravin Profile Photo">
+          </div>
+
+          <div class="hero-info-box">
+            <div class="hero-profile-details">
+              <h1 class="hero-profile-name">
+                Dr. Pravin Thangavelu
+                <span
+                  style="font-size: 15px; color: var(--text-muted); font-weight: normal; margin-left: 8px; display: inline-flex; align-items: center; gap: 6px; vertical-align: middle;">
+                  <i class="fas fa-shield-halved" style="font-size: 14px; color: var(--text-muted);"
+                    title="Verified account"></i>
+                  <span>He/Him</span>
+                  <span>&middot;</span>
+                  <span style="font-weight: 600; color: var(--text-muted);">1st</span>
+                </span>
+              </h1>
+              <p class="hero-profile-headline">Executive Director - ECLearnix EdTech</p>
+              <p class="hero-profile-location">Coimbatore, Tamil Nadu, India • <a
+                  href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank"
+                  rel="noopener noreferrer">Contact info</a></p>
+              <a href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank"
+                rel="noopener noreferrer" class="hero-profile-connections"
+                style="display: block; margin-top: 6px;">10,995 followers</a>
+
+              <div class="hero-actions-bar">
+                <a href="#tribute-hub" class="linkedin-btn btn-primary">Celebrate Birthday 🎉</a>
+                <a href="about.html" class="linkedin-btn btn-secondary">About</a>
+              </div>
+            </div>
+
+            <div class="hero-institution-badges">
+              <a href="#experience" class="institution-badge">
+                <img class="institution-badge-logo" src="assets/eclearnix_logo.png"
+                  alt="ECLearnix EdTech Private Limited Logo">
+                <span>ECLearnix EdTech Private Limited</span>
+              </a>
+              <a href="#education" class="institution-badge">
+                <svg class="institution-badge-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  style="fill: #990000; border-radius: 4px; border: 1px solid var(--border-linkedin); padding: 2px; background: #FFF;"
+                  alt="Anna University Chennai Logo">
+                  <circle cx="12" cy="12" r="10" stroke="#990000" stroke-width="1.5" fill="none" />
+                  <circle cx="12" cy="12" r="6" stroke="#990000" stroke-width="1" fill="none" />
+                  <path d="M12 2 L12 22 M2 12 L22 12 M5 5 L19 19 M5 19 L19 5" stroke="#990000" stroke-width="1" />
+                  <circle cx="12" cy="12" r="3" fill="#990000" />
+                </svg>
+                <span>Anna University Chennai</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT CARD (SHORT) -->
+        <div id="about-short" class="linkedin-card">
+          <h2 class="linkedin-card-title">About</h2>
+          <div
+            style="font-size: 14px; line-height: 1.6; color: var(--text-muted); display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+            <p style="margin: 0;">
+              Dr. Pravin Thangavelu is a visionary entrepreneur, educator, researcher, and mentor. As the Co-Founder and
+              Director of ECLearnix EdTech, he has played a key role in building platforms that connect education,
+              research, technology, and industry, dedicated to empowering students and professionals to innovate.
+            </p>
+            <a href="about.html" class="linkedin-btn btn-secondary"
+              style="font-size: 12px; padding: 6px 16px; border-radius: 50px; text-decoration: none;">Read More</a>
+          </div>
+        </div>
+
+
+        <!-- EXPERIENCE CARD -->
+        <div id="experience" class="linkedin-card">
+          <h2 class="linkedin-card-title">Experience</h2>
+          <div class="experience-list">
+            <!-- Job 1 -->
+            <div class="experience-item">
+              <div class="experience-logo-box">
+                <img class="experience-logo" src="assets/eclearnix_logo.png" alt="ECLearnix EdTech logo">
+              </div>
+              <div class="experience-details">
+                <h3 class="experience-role">Executive Director</h3>
+                <p class="experience-company">ECLearnix EdTech Private Limited · Full-time</p>
+                <p class="experience-dates">Dec 2024 - Present · 1 yr 7 mos</p>
+                <p class="experience-location" style="font-size: 13px; color: var(--text-muted);">Coimbatore, Tamil
+                  Nadu, India · On-site</p>
+                <p class="experience-desc">Focus on Finance, Accounting, Digital Marketing in Edtech, Financial
+                  Accounting, WhatsApp and other skills.</p>
+              </div>
+            </div>
+
+            <!-- Job 2: Rsp Science Hub nested -->
+            <div class="experience-item">
+              <div class="experience-logo-box">
+                <img class="experience-logo" src="assets/rsp_logo.png" alt="Rsp Science Hub logo">
+              </div>
+              <div class="experience-details" style="width: 100%;">
+                <h3 class="experience-company"
+                  style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;">Rsp Science
+                  Hub</h3>
+                <p class="experience-dates" style="font-size: 13px; color: var(--text-muted); margin-bottom: 2px;">7 yrs
+                  2 mos</p>
+                <p class="experience-location" style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+                  Coimbatore, Tamil Nadu, India · On-site</p>
+
+                <div class="nested-roles">
+                  <!-- Role 1 -->
+                  <div class="nested-role-item">
+                    <div class="nested-role-bullet"></div>
+                    <h4 class="experience-role" style="font-size: 15px; font-weight: 600;">Executive Officer</h4>
+                    <p class="experience-company" style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">
+                      Full-time</p>
+                    <p class="experience-dates" style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">Mar
+                      2024 - Present · 2 yrs 4 mos</p>
+                    <p class="experience-desc" style="font-size: 14px; color: var(--text-muted); margin-top: 6px;">
+                      Operational Execution</p>
+                  </div>
+                  <!-- Role 2 -->
+                  <div class="nested-role-item">
+                    <div class="nested-role-bullet"></div>
+                    <h4 class="experience-role" style="font-size: 15px; font-weight: 600;">Executive Office Manager</h4>
+                    <p class="experience-company" style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">
+                      Self-employed</p>
+                    <p class="experience-dates" style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">May
+                      2019 - Apr 2024 · 5 yrs</p>
+                    <p class="experience-desc" style="font-size: 14px; color: var(--text-muted); margin-top: 6px;">Focus
+                      on research, journal management, and academic partnership.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION CARD -->
+        <div id="education" class="linkedin-card">
+          <h2 class="linkedin-card-title">Education</h2>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-logo-box">
+                <i class="fas fa-university" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details">
+                <h3 class="experience-role">Anna University</h3>
+                <p class="experience-company">Doctor of Philosophy - PhD / Engineering Innovations</p>
+                <p class="experience-desc">With a strong academic background from Anna University, contributing
+                  significantly to research, patents, and engineering innovations in the fields of manufacturing,
+                  design, and technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VOLUNTEERING CARD -->
+        <div id="volunteering" class="linkedin-card">
+          <h2 class="linkedin-card-title">Volunteering</h2>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-logo-box">
+                <i class="fas fa-users" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details">
+                <h3 class="experience-role">Crew Member</h3>
+                <p class="experience-company">Brotherhood Bikers Coimbatore</p>
+                <p class="experience-dates">Jun 2015 - Jan 2019 · 3 yrs 8 mos</p>
+                <p class="experience-desc">Active crew member of the Brotherhood Bikers community in Coimbatore,
+                  combining a passion for automobiles with community rides and adventures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HONORS & AWARDS CARD -->
+        <div id="awards" class="linkedin-card">
+          <h2 class="linkedin-card-title">Honors &amp; Awards</h2>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-logo-box">
+                <i class="fas fa-trophy" style="font-size: 20px; color: var(--accent-linkedin);"></i>
+              </div>
+              <div class="experience-details">
+                <h3 class="experience-role">Best Innovation Award</h3>
+                <p class="experience-company">Issued by ISIE IKR 2018 · Jan 2019</p>
+                <p class="experience-desc">Recognizing outstanding design, creativity, and engineering solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <!-- RECOMMENDATIONS CARD (TEAM MESSAGES) -->
+        <div id="recommendations" class="linkedin-card">
+          <h2 class="linkedin-card-title">Tributes &amp; Endorsements</h2>
+          <span class="recommendations-tab-header">Received (3)</span>
+
+          <div class="recommendations-list">
+            <!-- Rec 1 -->
+            <div class="recommendation-item">
+              <div class="recommendation-author-box">
+                <div class="recommendation-avatar" style="font-size: 14px; font-weight: 700;">IT</div>
+                <div class="recommendation-meta">
+                  <h3 class="recommendation-author-name">IT Team</h3>
+                  <p class="recommendation-author-role">Design &amp; Developing Team</p>
+                  <span class="recommendation-date">June 26, 2026</span>
+                </div>
+              </div>
+              <p class="recommendation-quote">
+                "Your technical guidance transforms complex challenges into elegant solutions. Thank you for inspiring
+                our design and development units to innovate and build with excellence."
+              </p>
+            </div>
+
+            <!-- Rec 2 -->
+            <div class="recommendation-item">
+              <div class="recommendation-author-box">
+                <div class="recommendation-avatar">B</div>
+                <div class="recommendation-meta">
+                  <h3 class="recommendation-author-name">Business Team</h3>
+                  <p class="recommendation-author-role">Product Development Team</p>
+                  <span class="recommendation-date">June 26, 2026</span>
+                </div>
+              </div>
+              <p class="recommendation-quote">
+                "Thank you for your entrepreneurial vision and strategic leadership. Under your guidance, our product
+                development and business teams continue to turn bold ideas into successful products."
+              </p>
+            </div>
+
+            <!-- Rec 3 -->
+            <div class="recommendation-item">
+              <div class="recommendation-author-box">
+                <div class="recommendation-avatar" style="font-size: 14px; font-weight: 700;">ET</div>
+                <div class="recommendation-meta">
+                  <h3 class="recommendation-author-name">EdTech Team</h3>
+                  <p class="recommendation-author-role">EdTech Operations &amp; Delivery Unit</p>
+                  <span class="recommendation-date">June 26, 2026</span>
+                </div>
+              </div>
+              <p class="recommendation-quote">
+                "A true leader who has redefined how we deliver education. Your passion for learning and dedication to
+                students empowers our EdTech division to reach new heights and impact thousands of lives."
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR COLUMN (RIGHT) -->
+      <div class="sidebar-column">
+
+        <!-- PUBLIC PROFILE CARD -->
+        <div class="linkedin-card sidebar-card">
+          <h2 class="sidebar-card-title">
+            <span>Profile Language</span>
+            <i class="fas fa-globe" style="color: var(--text-muted); font-size: 14px;"></i>
+          </h2>
+          <p style="font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 12px;">English</p>
+
+          <hr style="border: none; border-top: 1px solid var(--border-linkedin); margin: 12px 0;">
+
+          <h2 class="sidebar-card-title">
+            <span>Public Profile &amp; URL</span>
+            <i class="fas fa-edit" style="color: var(--text-muted); font-size: 14px;"></i>
+          </h2>
+          <p style="font-size: 13px; color: var(--accent-linkedin); font-weight: 600;">
+            <a href="https://www.linkedin.com/in/dr-pravin-thangavelu-32942569/" target="_blank"
+              style="color: var(--accent-linkedin); text-decoration: none;">linkedin.com/in/dr-pravin-thangavelu-32942569</a>
+          </p>
+        </div>
+
+        <!-- BIRTHDAY AD ADVERTISEMENT CARD -->
+        <div class="linkedin-card sidebar-card sidebar-ad-card">
+          <div class="ad-text-top">Celebration Alert</div>
+          <div class="ad-avatar-group">
+            <img class="ad-avatar-profile" src="fam.jpg" alt="Dr. Pravin profile image"
+              style="width:56px; height:56px; object-fit:cover; border-radius:50%;">
+            <img class="ad-avatar-birthday" src="wish.png" alt="Wish image">
+          </div>
+          <h3 style="font-size: 15px; font-weight: 600; margin-bottom: 10px;">Happy Birthday Dr. Pravin Sir </h3>
+          <p class="ad-message-text">Celebrate Dr. Pravin Sir's special day by sending your respect and wishes inside
+            the
+            Tribute Hub.</p>
+          <a href="#tribute-hub" class="linkedin-btn btn-secondary" style="font-size: 12px; padding: 6px 16px;">Click
+            for the Surprise</a>
+        </div>
+
+        <!-- CO-FOUNDERS CONNECTIONS LIST CARD -->
+        <div class="linkedin-card sidebar-card">
+          <h2 class="sidebar-card-title">People Also Wished</h2>
+          <ul class="sidebar-list">
+            <!-- Co-founder 1 -->
+            <li class="sidebar-item">
+              <img src="somusir.png" alt="Dr. Somu Chinnusamy"
+                style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px;">
+              <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span style="font-weight: 600; color: var(--text-primary);">Dr. Somu Chinnusamy</span>
+                <span style="font-size: 11px; color: var(--text-muted);">Founder &amp; Chairman, ECLearnix
+                  EdTech</span>
+                <button class="linkedin-btn btn-secondary"
+                  style="font-size: 10px; padding: 3px 10px; align-self: flex-start; margin-top: 4px; border-radius: 4px;"><i
+                    class="fas fa-user-plus" style="font-size: 9px; color: var(--accent-linkedin);"></i>
+                  Connect</button>
+              </div>
+            </li>
+
+            <hr style="border: none; border-top: 1px solid var(--border-linkedin); margin: 6px 0;">
+
+            <!-- Co-founder 2 -->
+            <li class="sidebar-item">
+              <i class="fas fa-user-circle" style="font-size: 28px; color: var(--text-light);"></i>
+              <div style="display: flex; flex-direction: column; gap: 2px;">
+                <span style="font-weight: 600; color: var(--text-primary);">Er. Saravana Kumar Madheswaran</span>
+                <span style="font-size: 11px; color: var(--text-muted);">Co-Founder, ECLearnix EdTech</span>
+                <button class="linkedin-btn btn-secondary"
+                  style="font-size: 10px; padding: 3px 10px; align-self: flex-start; margin-top: 4px; border-radius: 4px;"><i
+                    class="fas fa-user-plus" style="font-size: 9px; color: var(--accent-linkedin);"></i>
+                  Connect</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo-row">
+        <div class="footer-logo-icon">PT</div>
+        <span>Happy Birthday Dr. Pravin Sir</span>
+      </div>
+      <div class="footer-icons">
+        <i class="fas fa-motorcycle" title="Ride Direction"></i>
+        <i class="fas fa-lightbulb" title="Innovation"></i>
+        <i class="fas fa-network-wired" title="LinkedIn Influence"></i>
+        <i class="fas fa-car-side" title="Performance Enthusiast"></i>
+      </div>
+      <p class="footer-text">
+        May your journey continue to inspire thousands, create opportunities, and shape the future of education.
+      </p>
+      <p class="footer-text" style="color: var(--text-light); font-size: 10px;">
+        Crafted with Respect &amp; Gratitude by Your ECLearnix IT Team
+      </p>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="script.js?v=1.0.8"></script>
+</body>
+
+</html>

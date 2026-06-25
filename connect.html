@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Connect with Dr. Pravin Sir, Co-Founder and Executive Director of ECLearnix EdTech Private Limited.">
+  <title>Connect | Dr. Pravin Sir</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=1.0.8">
+</head>
+
+<body>
+
+  <!-- BACKGROUND PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- LINKEDIN GLOBAL HEADER NAV BAR -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <div class="nav-logo-group">
+        <a href="index.html?reset=true" class="nav-logo-box">PT</a>
+        <div class="nav-search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </div>
+      <nav aria-label="LinkedIn Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+          <li><a href="connect.html" class="nav-link active"><i class="fas fa-users"></i><span>Connect</span></a></li>
+          <li><a href="research.html" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Research</span></a>
+          </li>
+          <li><a href="passion.html" class="nav-link"><i class="fas fa-motorcycle"></i><span>Passion</span></a></li>
+          <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i><span>Photo Gallery</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONNECTIONS LAYOUT GRID -->
+  <main class="container" style="margin-top: 24px;">
+    <div class="profile-grid" style="grid-template-columns: 280px 1fr;">
+
+      <!-- LEFT COLUMN: NETWORK NAVIGATION MENU (SIDEBAR) -->
+      <div class="sidebar-column">
+        <div class="linkedin-card sidebar-card" style="padding: 0; overflow: hidden;">
+          <h2 class="sidebar-card-title" style="padding: 16px 20px 8px 20px; font-size: 16px;">Manage my network</h2>
+          
+          <ul class="network-sidebar-menu" style="list-style: none; margin-bottom: 8px;">
+            <li style="border-bottom: 1px solid var(--border-linkedin);">
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-users" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Connections</span>
+                </div>
+                <span class="menu-count" id="sidebar-connections-count">1,284</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-address-book" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Contacts</span>
+                </div>
+                <span class="menu-count">3,109</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-user-check" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>People I Follow</span>
+                </div>
+                <span class="menu-count">412</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-users-rectangle" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Groups</span>
+                </div>
+                <span class="menu-count">18</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-calendar-days" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Events</span>
+                </div>
+                <span class="menu-count">4</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-building" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Pages</span>
+                </div>
+                <span class="menu-count">96</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network-menu-link">
+                <div class="menu-icon-label">
+                  <i class="fas fa-newspaper" style="color: var(--text-muted); font-size: 16px; width: 24px;"></i>
+                  <span>Newsletters</span>
+                </div>
+                <span class="menu-count">8</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: MY NETWORK MAIN CONTENT -->
+      <div class="main-column">
+        
+        <!-- PENDING INVITATIONS CARD -->
+        <div class="linkedin-card" id="invitations-card" style="padding: 0;">
+          <div class="invitations-header"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin);">
+            <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;" id="invitation-count-header">
+              Invitations (3)
+            </h2>
+            <a href="#" style="font-size: 14px; font-weight: 600; color: var(--text-muted);">See all</a>
+          </div>
+
+          <div class="invitations-list" id="invitations-list-container">
+            <!-- Invitation 1 -->
+            <div class="invitation-item" id="invitation-1"
+              style="display: flex; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin); transition: all 0.4s ease;">
+              <img class="invitation-avatar" src="kashnika.jpeg" alt="Kashnika"
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+              <div class="invitation-details" style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
+                  <div>
+                    <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Kashnika</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">IT Developer Intern at ECLearnix EdTech</p>
+                  </div>
+                  <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
+                    <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="1" style="font-size: 14px; padding: 6px 16px;">Ignore</button>
+                    <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="1" style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
+                  </div>
+                </div>
+                <div class="invitation-message"
+                  style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
+                  "Hi Dr. Pravin, your technical guidance transforms complex challenges into elegant solutions, inspiring our design and development units to build with excellence. I would love to connect!"
+                </div>
+              </div>
+            </div>
+
+            <!-- Invitation 2 -->
+            <div class="invitation-item" id="invitation-2"
+              style="display: flex; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin); transition: all 0.4s ease;">
+              <div class="invitation-avatar"
+                style="width: 48px; height: 48px; border-radius: 50%; background-color: #E2F0D9; color: #385723; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0;">
+                NA
+              </div>
+              <div class="invitation-details" style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
+                  <div>
+                    <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Navneeth</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">Business Analyst Intern at ECLearnix EdTech</p>
+                  </div>
+                  <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
+                    <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="2" style="font-size: 14px; padding: 6px 16px;">Ignore</button>
+                    <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="2" style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
+                  </div>
+                </div>
+                <div class="invitation-message"
+                  style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
+                  "Hi Dr. Pravin, thank you for your entrepreneurial vision and strategic leadership. Under your guidance, our product development and business teams continue to turn bold ideas into successful products. I'd love to connect!"
+                </div>
+              </div>
+            </div>
+
+            <!-- Invitation 3 -->
+            <div class="invitation-item" id="invitation-3"
+              style="display: flex; gap: 16px; padding: 16px 20px; transition: all 0.4s ease;">
+              <div class="invitation-avatar"
+                style="width: 48px; height: 48px; border-radius: 50%; background-color: #FDF2E9; color: #843C0C; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0;">
+                SU
+              </div>
+              <div class="invitation-details" style="flex-grow: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
+                  <div>
+                    <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Sujan</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">EdTech Operations Intern at ECLearnix EdTech</p>
+                  </div>
+                  <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
+                    <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="3" style="font-size: 14px; padding: 6px 16px;">Ignore</button>
+                    <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="3" style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
+                  </div>
+                </div>
+                <div class="invitation-message"
+                  style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
+                  "Hi Dr. Pravin, you are a true leader who has redefined how we deliver education. Your passion for learning and dedication to students empowers our EdTech division to reach new heights and impact thousands of lives. I would love to connect!"
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PEOPLE YOU MAY KNOW GRID CARD -->
+        <div class="linkedin-card" style="padding: 0; margin-top: 24px;">
+          <div class="suggestions-header" style="padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin);">
+            <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;">
+              People you may know in EdTech & Academia
+            </h2>
+          </div>
+          
+          <div class="connection-suggestions-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 20px;">
+            
+            <!-- Suggestion Card 1 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);"></div>
+              <img class="suggestion-avatar" src="Gopi.jpeg" alt="Gopinath">
+              <h3 class="suggestion-name">Gopinath</h3>
+              <p class="suggestion-headline">IT Intern at ECLearnix EdTech</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>12 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 2 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);"></div>
+              <img class="suggestion-avatar" src="prabavathi.jpeg" alt="Prabavathi">
+              <h3 class="suggestion-name">Prabavathi</h3>
+              <p class="suggestion-headline">IT Intern at ECLearnix EdTech</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>8 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 3 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
+              <img class="suggestion-avatar" src="Sriram.jpg" alt="Sriram">
+              <h3 class="suggestion-name">Sriram</h3>
+              <p class="suggestion-headline">Software Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>15 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 4 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
+              <img class="suggestion-avatar" src="swetha.jpeg" alt="Swetha">
+              <h3 class="suggestion-name">Swetha</h3>
+              <p class="suggestion-headline">Software Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>24 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 5 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
+              <img class="suggestion-avatar" src="abinaya.jpeg" alt="Abinaya">
+              <h3 class="suggestion-name">Abinaya</h3>
+              <p class="suggestion-headline">Web Development Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>Saravana Kumar is a connection</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 6 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
+              <img class="suggestion-avatar" src="dhivya.JPG" alt="Dhivyadharshini">
+              <h3 class="suggestion-name">Dhivyadharshini</h3>
+              <p class="suggestion-headline">Web Development Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>3 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 7 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);"></div>
+              <img class="suggestion-avatar" src="Kanchana.png" alt="Kanchana">
+              <h3 class="suggestion-name">Kanchana</h3>
+              <p class="suggestion-headline">QA Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>10 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 8 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+              <img class="suggestion-avatar" src="kanishkaa.png" alt="Kanishkaa">
+              <h3 class="suggestion-name">Kanishkaa</h3>
+              <p class="suggestion-headline">UI/UX Design Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>6 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 9 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);"></div>
+              <img class="suggestion-avatar" src="sudharshan.jpeg" alt="Sudharshan">
+              <h3 class="suggestion-name">Sudharshan</h3>
+              <p class="suggestion-headline">DevOps Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>14 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 10 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+              <img class="suggestion-avatar" src="abinauw.jpeg" alt="Abinauw">
+              <h3 class="suggestion-name">Abinauw</h3>
+              <p class="suggestion-headline">Mobile App Development Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>5 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 11 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);"></div>
+              <img class="suggestion-avatar" src="prem.jpeg" alt="Prem">
+              <h3 class="suggestion-name">Prem</h3>
+              <p class="suggestion-headline">Data Science Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>2 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 12 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #E8F5E9; color: #2E7D32;">DH</div>
+              <h3 class="suggestion-name">Dhanya</h3>
+              <p class="suggestion-headline">Digital Marketing Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>11 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 13 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #FCE4EC; color: #C2185B;">DH</div>
+              <h3 class="suggestion-name">Dharshini</h3>
+              <p class="suggestion-headline">Content Development Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>7 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 14 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #ECEFF1; color: #455A64;">PR</div>
+              <h3 class="suggestion-name">Pradeeksha</h3>
+              <p class="suggestion-headline">Business Analyst Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>9 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 15 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #FCE4EC; color: #C2185B;">KS</div>
+              <h3 class="suggestion-name">Kavya sree</h3>
+              <p class="suggestion-headline">UI/UX Design Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>8 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 16 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #E6F4EA; color: #137333;">SA</div>
+              <h3 class="suggestion-name">Sarulatha</h3>
+              <p class="suggestion-headline">Web Development Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>11 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 17 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #F6EAFB; color: #6C3483;">DH</div>
+              <h3 class="suggestion-name">Dhanuja</h3>
+              <p class="suggestion-headline">Software Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>14 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 18 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #FFF0F0; color: #C5221F;">DE</div>
+              <h3 class="suggestion-name">Deeksha</h3>
+              <p class="suggestion-headline">QA Engineering Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>5 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+            <!-- Suggestion Card 19 -->
+            <div class="suggestion-card">
+              <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+              <div class="suggestion-avatar" style="background-color: #FFF8E1; color: #F57F17;">RU</div>
+              <h3 class="suggestion-name">Rubella</h3>
+              <p class="suggestion-headline">EdTech Operations Intern</p>
+              <div class="suggestion-mutual">
+                <i class="fas fa-user-group"></i>
+                <span>7 mutual connections</span>
+              </div>
+              <button class="suggestion-connect-btn">
+                <i class="fas fa-user-plus"></i> Connect
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo-row">
+        <div class="footer-logo-icon">PT</div>
+        <span>Happy Birthday Dr. Pravin Sir</span>
+      </div>
+      <div class="footer-icons">
+        <i class="fas fa-motorcycle" title="Ride Direction"></i>
+        <i class="fas fa-lightbulb" title="Innovation"></i>
+        <i class="fas fa-network-wired" title="LinkedIn Influence"></i>
+        <i class="fas fa-car-side" title="Performance Enthusiast"></i>
+      </div>
+      <p class="footer-text">
+        May your journey continue to inspire thousands, create opportunities, and shape the future of education.
+      </p>
+      <p class="footer-text" style="color: var(--text-light); font-size: 10px;">
+        Crafted with Respect &amp; Gratitude by Your ECLearnix IT Team
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js?v=1.0.8"></script>
+</body>
+
+</html>
