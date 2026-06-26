@@ -56,7 +56,7 @@
       <div class="sidebar-column">
         <div class="linkedin-card sidebar-card" style="padding: 0; overflow: hidden;">
           <h2 class="sidebar-card-title" style="padding: 16px 20px 8px 20px; font-size: 16px;">Manage my network</h2>
-          
+
           <ul class="network-sidebar-menu" style="list-style: none; margin-bottom: 8px;">
             <li style="border-bottom: 1px solid var(--border-linkedin);">
               <a href="#" class="network-menu-link">
@@ -127,382 +127,417 @@
 
       <!-- RIGHT COLUMN: MY NETWORK MAIN CONTENT -->
       <div class="main-column">
-        
+
         <!-- PENDING INVITATIONS CARD -->
         <div class="linkedin-card" id="invitations-card" style="padding: 0;">
           <div class="invitations-header"
             style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin);">
-            <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;" id="invitation-count-header">
+            <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;"
+              id="invitation-count-header">
               Invitations (2)
-          </h2>
-          <a href="#" style="font-size: 14px; font-weight: 600; color: var(--text-muted);">See all</a>
-        </div>
-
-        <div class="invitations-list" id="invitations-list-container">
-          <!-- Invitation 2 -->
-          <div class="invitation-item" id="invitation-2"
-            style="display: flex; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin); transition: all 0.4s ease;">
-            <img class="invitation-avatar" src="navneeth.jpeg" alt="Navneeth"
-              style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
-            <div class="invitation-details" style="flex-grow: 1;">
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
-                <div>
-                  <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Navneeth</h3>
-                  <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">UI/UX Design Intern at ECLearnix EdTech</p>
-                </div>
-                <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
-                  <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="2" style="font-size: 14px; padding: 6px 16px;">Ignore</button>
-                  <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="2" style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
-                </div>
-              </div>
-              <div class="invitation-message"
-                style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
-                "Hi Dr. Pravin, thank you for your entrepreneurial vision and strategic leadership. Under your guidance, our product development and business teams continue to turn bold ideas into successful products. I'd love to connect!"
-              </div>
-            </div>
-          </div>
-
-          <!-- Invitation 3 -->
-          <div class="invitation-item" id="invitation-3"
-            style="display: flex; gap: 16px; padding: 16px 20px; transition: all 0.4s ease;">
-            <img class="invitation-avatar" src="sujan.jpeg" alt="Sujan"
-              style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
-            <div class="invitation-details" style="flex-grow: 1;">
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
-                <div>
-                  <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Sujan</h3>
-                  <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">UI/UX Design Intern at ECLearnix EdTech</p>
-                </div>
-                <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
-                  <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="3" style="font-size: 14px; padding: 6px 16px;">Ignore</button>
-                  <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="3" style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
-                </div>
-              </div>
-              <div class="invitation-message"
-                style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
-                "Hi Dr. Pravin, you are a true leader who has redefined how we deliver education. Your passion for learning and dedication to students empowers our EdTech division to reach new heights and impact thousands of lives. I would love to connect!"
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PEOPLE YOU MAY KNOW GRID CARD -->
-        <div class="linkedin-card" style="padding: 0; margin-top: 24px;">
-          <div class="suggestions-header" style="padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin);">
-            <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;">
-              People you may know in EdTech & Academia
             </h2>
+            <a href="#" style="font-size: 14px; font-weight: 600; color: var(--text-muted);">See all</a>
           </div>
-          
-          <div class="connection-suggestions-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 20px;">
-            
-            <!-- Suggestion Card 1: Gopinath -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);"></div>
-              <img class="suggestion-avatar" src="Gopi.jpeg" alt="Gopinath">
-              <h3 class="suggestion-name">Gopinath</h3>
-              <p class="suggestion-headline">Mobile Application Developer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>12 mutual connections</span>
+
+          <div class="invitations-list" id="invitations-list-container">
+            <!-- Invitation 2 -->
+            <div class="invitation-item" id="invitation-2"
+              style="display: flex; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin); transition: all 0.4s ease;">
+              <img class="invitation-avatar" src="navneeth.jpeg" alt="Navneeth"
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+              <div class="invitation-details" style="flex-grow: 1;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
+                  <div>
+                    <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Navneeth</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">UI/UX Design Intern at
+                      ECLearnix EdTech</p>
+                  </div>
+                  <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
+                    <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="2"
+                      style="font-size: 14px; padding: 6px 16px;">Ignore</button>
+                    <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="2"
+                      style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
+                  </div>
+                </div>
+                <div class="invitation-message"
+                  style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
+                  "Hi Dr. Pravin, thank you for your entrepreneurial vision and strategic leadership. Under your
+                  guidance, our product development and business teams continue to turn bold ideas into successful
+                  products. I'd love to connect!"
+                </div>
               </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
             </div>
 
-            <!-- Suggestion Card 2: Sriram R -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
-              <img class="suggestion-avatar" src="Sriram.jpg" alt="Sriram R">
-              <h3 class="suggestion-name">Sriram R</h3>
-              <p class="suggestion-headline">Digital Product Designer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>15 mutual connections</span>
+            <!-- Invitation 3 -->
+            <div class="invitation-item" id="invitation-3"
+              style="display: flex; gap: 16px; padding: 16px 20px; transition: all 0.4s ease;">
+              <img class="invitation-avatar" src="sujan.jpeg" alt="Sujan"
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+              <div class="invitation-details" style="flex-grow: 1;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px;">
+                  <div>
+                    <h3 style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin: 0;">Sujan</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">UI/UX Design Intern at
+                      ECLearnix EdTech</p>
+                  </div>
+                  <div class="invitation-actions" style="display: flex; gap: 12px; flex-shrink: 0;">
+                    <button class="linkedin-btn btn-text ignore-invitation-btn" data-id="3"
+                      style="font-size: 14px; padding: 6px 16px;">Ignore</button>
+                    <button class="linkedin-btn btn-secondary accept-invitation-btn" data-id="3"
+                      style="font-size: 14px; padding: 6px 18px; border-radius: 50px;">Accept</button>
+                  </div>
+                </div>
+                <div class="invitation-message"
+                  style="font-size: 13px; color: var(--text-muted); background-color: var(--bg-primary); border-radius: 8px; padding: 12px; border-left: 3px solid var(--accent-linkedin); line-height: 1.4;">
+                  "Hi Dr. Pravin, you are a true leader who has redefined how we deliver education. Your passion for
+                  learning and dedication to students empowers our EdTech division to reach new heights and impact
+                  thousands of lives. I would love to connect!"
+                </div>
               </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
             </div>
-
-            <!-- Suggestion Card 3: Prabavathi -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);"></div>
-              <img class="suggestion-avatar" src="prabavathi.jpeg" alt="Prabavathi">
-              <h3 class="suggestion-name">Prabavathi</h3>
-              <p class="suggestion-headline">Full Stack Developer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>8 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 4: Swetha -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
-              <img class="suggestion-avatar" src="swetha.jpeg" alt="Swetha">
-              <h3 class="suggestion-name">Swetha</h3>
-              <p class="suggestion-headline">UI/UX Designer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>24 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 5: Abinaya -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
-              <img class="suggestion-avatar" src="abinaya.jpeg" alt="Abinaya">
-              <h3 class="suggestion-name">Abinaya</h3>
-              <p class="suggestion-headline">Software Quality Assurance (QA) Tester</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>Saravana Kumar is a connection</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 6: Dhivyadharshini -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
-              <img class="suggestion-avatar" src="dhivya.JPG" alt="Dhivyadharshini">
-              <h3 class="suggestion-name">Dhivyadharshini</h3>
-              <p class="suggestion-headline">Front-End Developer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>3 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 7: Kanchana Mala -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);"></div>
-              <img class="suggestion-avatar" src="Kanchana.png" alt="Kanchana Mala">
-              <h3 class="suggestion-name">Kanchana Mala</h3>
-              <p class="suggestion-headline">UI/UX Designer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>10 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 8: Kanishkaa -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
-              <img class="suggestion-avatar" src="kanishkaa.png" alt="Kanishkaa">
-              <h3 class="suggestion-name">Kanishkaa</h3>
-              <p class="suggestion-headline">UI/UX Designer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>6 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 9: Sarulatha -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
-              <img class="suggestion-avatar" src="saru.png" alt="Sarulatha">
-              <h3 class="suggestion-name">Sarulatha</h3>
-              <p class="suggestion-headline">Human Resources Executive</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>11 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 10: Kavya Sree -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
-              <img class="suggestion-avatar" src="kavya.png" alt="Kavya Sree">
-              <h3 class="suggestion-name">Kavya Sree</h3>
-              <p class="suggestion-headline">Team Lead & Business Analyst</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>8 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 11: Dhanuja -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
-              <img class="suggestion-avatar" src="dhanuja.png" alt="Dhanuja">
-              <h3 class="suggestion-name">Dhanuja</h3>
-              <p class="suggestion-headline">Digital Marketing Executive</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>14 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 12: Deeksha -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);"></div>
-              <img class="suggestion-avatar" src="deeksha.png" alt="Deeksha">
-              <h3 class="suggestion-name">Deeksha</h3>
-              <p class="suggestion-headline">Content Writer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>5 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 13: Rubella -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
-              <img class="suggestion-avatar" src="rubella.png" alt="Rubella">
-              <h3 class="suggestion-name">Rubella</h3>
-              <p class="suggestion-headline">Graphic Designer</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>7 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 14: Sudharshan -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);"></div>
-              <img class="suggestion-avatar" src="sudharshan.jpeg" alt="Sudharshan">
-              <h3 class="suggestion-name">Sudharshan</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>14 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 15: Abinauw -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-              <img class="suggestion-avatar" src="abinauw.jpeg" alt="Abinauw">
-              <h3 class="suggestion-name">Abinauw</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>5 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 16: Prem Kumar -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);"></div>
-              <img class="suggestion-avatar" src="prem.jpeg" alt="Prem Kumar">
-              <h3 class="suggestion-name">Prem Kumar</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>2 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 17: Kashnika -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);"></div>
-              <img class="suggestion-avatar" src="kashnika.jpeg" alt="Kashnika">
-              <h3 class="suggestion-name">Kashnika</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>10 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 18: Dhanya -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);"></div>
-              <div class="suggestion-avatar" style="background-color: #E8F5E9; color: #2E7D32;">DH</div>
-              <h3 class="suggestion-name">Dhanya</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>11 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 19: Pradeeskha -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-              <img class="suggestion-avatar" src="pradeeksha.jpeg" alt="Pradeeskha">
-              <h3 class="suggestion-name">Pradeeskha</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>9 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
-            <!-- Suggestion Card 20: Dharshini -->
-            <div class="suggestion-card">
-              <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);"></div>
-              <div class="suggestion-avatar" style="background-color: #FCE4EC; color: #C2185B;">DH</div>
-              <h3 class="suggestion-name">Dharshini</h3>
-              <p class="suggestion-headline">Full Stack Developer Intern</p>
-              <div class="suggestion-mutual">
-                <i class="fas fa-user-group"></i>
-                <span>7 mutual connections</span>
-              </div>
-              <button class="suggestion-connect-btn">
-                <i class="fas fa-user-plus"></i> Connect
-              </button>
-            </div>
-
           </div>
+
+          <!-- PEOPLE YOU MAY KNOW GRID CARD -->
+          <div class="linkedin-card" style="padding: 0; margin-top: 24px;">
+            <div class="suggestions-header"
+              style="padding: 16px 20px; border-bottom: 1px solid var(--border-linkedin);">
+              <h2 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0;">
+                People you may know in EdTech & Academia
+              </h2>
+            </div>
+
+            <div class="connection-suggestions-grid"
+              style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 20px;">
+
+              <!-- Suggestion Card 1: Gopinath -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);">
+                </div>
+                <img class="suggestion-avatar" src="Gopi.jpeg" alt="Gopinath">
+                <h3 class="suggestion-name">Gopinath</h3>
+                <p class="suggestion-headline">Mobile Application Developer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>12 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 2: Sriram R -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                </div>
+                <img class="suggestion-avatar" src="Sriram.jpg" alt="Sriram R">
+                <h3 class="suggestion-name">Sriram R</h3>
+                <p class="suggestion-headline">Digital Product Designer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>7 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 3: Prabavathi -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+                </div>
+                <img class="suggestion-avatar" src="prabavathi.jpeg" alt="Prabavathi">
+                <h3 class="suggestion-name">Prabavathi</h3>
+                <p class="suggestion-headline">Full Stack Developer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>8 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 4: Swetha -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                </div>
+                <img class="suggestion-avatar" src="swetha.jpeg" alt="Swetha">
+                <h3 class="suggestion-name">Swetha</h3>
+                <p class="suggestion-headline">UI/UX Designer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>24 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 5: Abinaya -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                </div>
+                <img class="suggestion-avatar" src="abinaya.jpeg" alt="Abinaya">
+                <h3 class="suggestion-name">Abinaya</h3>
+                <p class="suggestion-headline">Software Quality Assurance (QA) Tester</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>Saravana Kumar is a connection</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 6: Dhivyadharshini -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                </div>
+                <img class="suggestion-avatar" src="dhivya.JPG" alt="Dhivyadharshini">
+                <h3 class="suggestion-name">Dhivyadharshini</h3>
+                <p class="suggestion-headline">Front-End Developer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>3 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 7: Kanchana Mala -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);">
+                </div>
+                <img class="suggestion-avatar" src="Kanchana.png" alt="Kanchana Mala">
+                <h3 class="suggestion-name">Kanchana Mala</h3>
+                <p class="suggestion-headline">UI/UX Designer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>10 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 8: Kanishkaa -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                </div>
+                <img class="suggestion-avatar" src="kanishkaa.png" alt="Kanishkaa">
+                <h3 class="suggestion-name">Kanishkaa</h3>
+                <p class="suggestion-headline">UI/UX Designer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>6 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 9: Sarulatha -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                </div>
+                <img class="suggestion-avatar" src="saru.png" alt="Sarulatha">
+                <h3 class="suggestion-name">Sarulatha</h3>
+                <p class="suggestion-headline">Human Resources Executive</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>11 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 10: Kavya Sree -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                </div>
+                <img class="suggestion-avatar" src="kavya.png" alt="Kavya Sree">
+                <h3 class="suggestion-name">Kavya Sree</h3>
+                <p class="suggestion-headline">Team Lead & Business Analyst</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>8 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 11: Dhanuja -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                </div>
+                <img class="suggestion-avatar" src="dhanuja.png" alt="Dhanuja">
+                <h3 class="suggestion-name">Dhanuja</h3>
+                <p class="suggestion-headline">Digital Marketing Executive</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>14 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 12: Deeksha -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);">
+                </div>
+                <img class="suggestion-avatar" src="deeksha.png" alt="Deeksha">
+                <h3 class="suggestion-name">Deeksha</h3>
+                <p class="suggestion-headline">Content Writer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>5 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 13: Rubella -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                </div>
+                <img class="suggestion-avatar" src="rubella.png" alt="Rubella">
+                <h3 class="suggestion-name">Rubella</h3>
+                <p class="suggestion-headline">Graphic Designer</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>7 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 14: Sudharshan -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
+                </div>
+                <img class="suggestion-avatar" src="sudharshan.jpeg" alt="Sudharshan">
+                <h3 class="suggestion-name">Sudharshan</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>14 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 15: Abinauw -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                </div>
+                <img class="suggestion-avatar" src="abinauw.jpeg" alt="Abinauw">
+                <h3 class="suggestion-name">Abinauw</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>5 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 16: Prem Kumar -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);">
+                </div>
+                <img class="suggestion-avatar" src="prem.jpeg" alt="Prem Kumar">
+                <h3 class="suggestion-name">Prem Kumar</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>2 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 17: Kashnika -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);">
+                </div>
+                <img class="suggestion-avatar" src="kashnika.jpeg" alt="Kashnika">
+                <h3 class="suggestion-name">Kashnika</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>10 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 18: Pradeeskha -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                </div>
+                <img class="suggestion-avatar" src="pradeeksha.jpeg" alt="Pradeeskha">
+                <h3 class="suggestion-name">Pradeeskha</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>9 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+              <!-- Suggestion Card 19: Dhanya -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);">
+                </div>
+                <div class="suggestion-avatar" style="background-color: #E8F5E9; color: #2E7D32;">DH</div>
+                <h3 class="suggestion-name">Dhanya</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>11 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+
+              <!-- Suggestion Card 20: Dharshini -->
+              <div class="suggestion-card">
+                <div class="suggestion-cover" style="background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);">
+                </div>
+                <div class="suggestion-avatar" style="background-color: #FCE4EC; color: #C2185B;">DH</div>
+                <h3 class="suggestion-name">Dharshini</h3>
+                <p class="suggestion-headline">Full Stack Developer Intern</p>
+                <div class="suggestion-mutual">
+                  <i class="fas fa-user-group"></i>
+                  <span>7 mutual connections</span>
+                </div>
+                <button class="suggestion-connect-btn">
+                  <i class="fas fa-user-plus"></i> Connect
+                </button>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
-
-    </div>
   </main>
 
   <!-- FOOTER -->
