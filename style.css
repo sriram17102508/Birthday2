@@ -1695,7 +1695,8 @@ body.scroll-lock {
   justify-content: center;
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1718,7 +1719,8 @@ body.scroll-lock {
   transition: var(--transition-smooth);
 }
 
-.gallery-item:hover img {
+.gallery-item:hover img,
+.gallery-item:hover video {
   transform: scale(1.06);
 }
 
@@ -2917,4 +2919,33 @@ img.suggestion-avatar {
   .lightbox-nav-btn.next-btn {
     right: 10px;
   }
+}
+
+/* --- HERO VIDEO MUTE BUTTON --- */
+.hero-mute-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-mute-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: scale(1.1);
+}
+
+.hero-mute-btn i {
+  font-size: 11px;
 }

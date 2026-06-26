@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 14. Initialize Candle Birthday Popup
   initCandlePopup();
+
+  // 15. Initialize Hero Section Video Volume and Mute Toggle
+  initHeroVideo();
 });
 
 /* --- LANDING INTRO & BIRTHDAY POPUP CONTROL --- */
@@ -451,6 +454,7 @@ function initGalleryLightbox() {
   const galleryItems = Array.from(document.querySelectorAll('.gallery-item, .profile-gallery-item'));
   const lightbox = document.getElementById('gallery-lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxVideo = document.getElementById('lightbox-video');
   const lightboxClose = document.querySelector('.lightbox-close');
   const prevBtn = document.getElementById('lightbox-prev');
   const nextBtn = document.getElementById('lightbox-next');
@@ -463,15 +467,40 @@ function initGalleryLightbox() {
     currentIndex = index;
     const item = galleryItems[index];
     if (!item) return;
+
     const img = item.querySelector('img');
+    const video = item.querySelector('video');
+    const downloadBtn = document.getElementById('lightbox-download');
+
     if (img) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      
-      const downloadBtn = document.getElementById('lightbox-download');
+      if (lightboxVideo) {
+        lightboxVideo.style.display = 'none';
+        lightboxVideo.pause();
+        lightboxVideo.removeAttribute('src');
+      }
+      if (lightboxImg) {
+        lightboxImg.style.display = 'block';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
+      }
       if (downloadBtn) {
         downloadBtn.href = img.src;
         const filename = img.src.substring(img.src.lastIndexOf('/') + 1);
+        downloadBtn.download = filename;
+      }
+    } else if (video) {
+      if (lightboxImg) {
+        lightboxImg.style.display = 'none';
+        lightboxImg.removeAttribute('src');
+      }
+      if (lightboxVideo) {
+        lightboxVideo.style.display = 'block';
+        lightboxVideo.src = video.src;
+        lightboxVideo.play();
+      }
+      if (downloadBtn) {
+        downloadBtn.href = video.src;
+        const filename = video.src.substring(video.src.lastIndexOf('/') + 1);
         downloadBtn.download = filename;
       }
     }
@@ -522,6 +551,10 @@ function initGalleryLightbox() {
   const closeLightbox = () => {
     lightbox.classList.remove('show');
     document.body.classList.remove('scroll-lock');
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute('src');
+    }
   };
 
   if (lightboxClose) {
@@ -976,4 +1009,61 @@ function initConnectPage() {
       }
     });
   }
+}
+
+/* --- HERO VIDEO MUTE/UNMUTE INTERACTION --- */
+function initHeroVideo() {
+  const video = document.querySelector('.hero-cover-video');
+  const muteBtn = document.querySelector('.hero-mute-btn');
+  if (!video || !muteBtn) return;
+
+  // Set initial volume to 70%
+  video.volume = 0.7;
+
+  // Retrieve persistent mute state from localStorage (default to muted = true on very first load)
+  let savedMuteState = localStorage.getItem('hero_video_muted');
+  let startMuted = (savedMuteState === null) ? true : (savedMuteState === 'true');
+
+  const setMuteState = (shouldMute) => {
+    video.muted = shouldMute;
+    localStorage.setItem('hero_video_muted', shouldMute ? 'true' : 'false');
+    if (shouldMute) {
+      muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    } else {
+      muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    }
+  };
+
+  // Set initial player state
+  video.muted = startMuted;
+
+  // Modern browsers block autoplay with sound. Try playing based on saved mute state:
+  video.play().then(() => {
+    setMuteState(video.muted);
+  }).catch((error) => {
+    // Autoplay failed or blocked. Force mute so it autoplays.
+    video.muted = true;
+    video.play();
+    muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+  });
+
+  // If user wants it unmuted but browser blocked audio on load, unmute on first user click anywhere on the page
+  if (!startMuted) {
+    const unmuteOnInteraction = () => {
+      if (video.muted) {
+        video.muted = false;
+        video.volume = 0.7;
+        muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+      }
+      document.removeEventListener('click', unmuteOnInteraction);
+    };
+    document.addEventListener('click', unmuteOnInteraction);
+  }
+
+  // Click on the mute button toggles state explicitly
+  muteBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const newMuteState = !video.muted;
+    setMuteState(newMuteState);
+  });
 }
