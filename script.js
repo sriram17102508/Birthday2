@@ -909,7 +909,7 @@ function initConnectPage() {
   const headerInvitationCount = document.getElementById('invitation-count-header');
   
   let connectionsCount = 1284;
-  let invitationsCount = 3;
+  let invitationsCount = 2;
 
   // Accept / Ignore Invitation
   invitationsContainer.addEventListener('click', (e) => {
